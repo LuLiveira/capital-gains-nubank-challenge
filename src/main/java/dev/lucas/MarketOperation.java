@@ -24,6 +24,10 @@ public record MarketOperation (@NotNull @NotBlank OperationType operation,
                                 @NotNull @NotBlank @Positive BigDecimal unitCost,
                                @NotNull @NotBlank @Min(0) Integer quantity){
 
+    /**
+     *
+     * @return OperationOutput valor da taxa da operação
+     */
     public OperationOutput tax() {
         return new OperationOutput(new BigDecimal(0));
     }
