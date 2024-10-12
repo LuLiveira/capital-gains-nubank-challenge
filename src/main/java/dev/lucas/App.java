@@ -14,6 +14,16 @@ public class App {
 
         /**
          * Esse trecho de código recebe um input JSON
+         * O padrão esperado é:
+         * [{"operation":"buy", "unit-cost":10.00, "quantity": 10000},
+         * {"operation":"sell", "unit-cost":20.00, "quantity": 5000}]
+         * [{"operation":"buy", "unit-cost":20.00, "quantity": 10000},
+         * {"operation":"sell", "unit-cost":10.00, "quantity": 5000}]
+         *
+         * Realizei alguns experimentos para receber valores em JSON diferentes e deixar o programa mais dinamico, todos exigiam mais do código
+         * então, assumi como premissa o uso especifico de um JSON que seguisse o padrão assim. Busquei auxilio de IA após estressar as possibilidades
+         * mesmo com IA o resultado não me agradou e seria um esforço maior, aumentando a complexidade do código sem um ganho real
+         *
          */
         try (Scanner input = new Scanner(System.in)) { //Usando try with resources para encerrar o scanner
             while (!(line = input.nextLine()).isEmpty()) {
